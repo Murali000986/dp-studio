@@ -1,14 +1,14 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { portfolio, portfolioCategories } from '../../data/content';
+import { PORTFOLIO_ITEMS, PORTFOLIO_CATS } from '../../data/content';
 
 export default function PortfolioSection() {
   const [activeCategory, setActiveCategory] = useState('All');
   const [hoveredId, setHoveredId] = useState<number | null>(null);
 
   const filtered = activeCategory === 'All'
-    ? portfolio
-    : portfolio.filter(p => p.category === activeCategory);
+    ? PORTFOLIO_ITEMS
+    : PORTFOLIO_ITEMS.filter((p: { category: string }) => p.category === activeCategory);
 
   return (
     <section id="portfolio" style={{
@@ -81,7 +81,7 @@ export default function PortfolioSection() {
             marginBottom: '2.5rem',
           }}
         >
-          {portfolioCategories.map(cat => (
+          {PORTFOLIO_CATS.map((cat: string) => (
             <button
               key={cat}
               id={`filter-${cat.replace(/\s+/g, '-').toLowerCase()}`}
@@ -238,7 +238,7 @@ export default function PortfolioSection() {
               fontSize: '1rem',
               transition: 'all 0.3s',
             }}
-            whileHover={{ background: 'rgba(212,175,55,0.1)', scale: 1.03 } as object}
+            whileHover={{ background: 'rgba(212,175,55,0.1)', scale: 1.03 } as never}
           >
             View Full Portfolio →
           </motion.a>

@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { whyUs } from '../../data/content';
+import { WHY_US } from '../../data/content';
 
 export default function WhyUsSection() {
   return (
@@ -77,7 +77,7 @@ export default function WhyUsSection() {
           gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
           gap: '1.5rem',
         }}>
-          {whyUs.map((item, i) => (
+          {WHY_US.map((item: { icon: string; title: string; description: string }, i: number) => (
             <motion.div
               key={item.title}
               initial={{ opacity: 0, y: 50 }}
@@ -88,7 +88,7 @@ export default function WhyUsSection() {
                 y: -8,
                 boxShadow: '0 30px 60px rgba(212,175,55,0.12)',
                 borderColor: 'rgba(212,175,55,0.4)',
-              } as object}
+              } as never}
               style={{
                 background: 'rgba(255,255,255,0.02)',
                 border: '1px solid rgba(255,255,255,0.06)',

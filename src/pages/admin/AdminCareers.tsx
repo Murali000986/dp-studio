@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { supabase } from '../../lib/supabase';
 import { Plus, Trash2, Edit2, Briefcase } from 'lucide-react';
-import { CAREER_ROLES } from '../../data/content';
+
 
 export default function AdminCareers() {
   const [items, setItems] = useState<any[]>([]);

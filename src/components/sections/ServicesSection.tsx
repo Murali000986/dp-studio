@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { services } from '../../data/content';
-import { Camera, Video, Scissors, Smartphone, TrendingUp, Palette } from 'lucide-react';
+import { SERVICES } from '../../data/content';
+import { Video, Scissors, Smartphone, Palette } from 'lucide-react';
 
 const iconMap: Record<string, React.ElementType> = {
   videoshoot: Video,
@@ -108,7 +108,7 @@ export default function ServicesSection() {
           gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
           gap: '1.5rem',
         }}>
-          {services.map((service, i) => {
+          {SERVICES.map((service: { id: string; title: string; description: string }, i: number) => {
             const IconComponent = iconMap[service.id];
             return (
             <motion.div

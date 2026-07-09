@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef, useCallback } from 'react';
 import { useSEO } from '../hooks/useSEO';
 import PageHero from '../components/ui/PageHero';
-import { PORTFOLIO_CATS, PORTFOLIO_ITEMS } from '../data/content';
+import { PORTFOLIO_CATS } from '../data/content';
 import { X, ZoomIn } from 'lucide-react';
 import { supabase } from '../lib/supabase';
 

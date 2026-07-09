@@ -115,7 +115,6 @@ export default function EmptyStageSection() {
             fontWeight: 300,
             fontSize: 'clamp(1.2rem, 3vw, 2rem)',
             color: '#888',
-            letterSpacing: '0.02em',
             marginBottom: '1rem',
             textTransform: 'uppercase',
             letterSpacing: '0.25em',

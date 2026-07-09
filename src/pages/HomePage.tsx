@@ -3,7 +3,7 @@ import { useEffect, useRef } from 'react';
 import { useSEO } from '../hooks/useSEO';
 import useCounter from '../hooks/useCounter';
 import { SERVICES, PORTFOLIO_ITEMS, TESTIMONIALS, STATS } from '../data/content';
-import { Camera, Video, Scissors, Smartphone, TrendingUp, Palette, Star } from 'lucide-react';
+import { Video, Scissors, Smartphone, Palette, Star } from 'lucide-react';
 
 const iconMap: Record<string, React.ElementType> = {
   videoshoot: Video,
@@ -43,7 +43,7 @@ function StatCard({ value, suffix, label, delay, light }: { value: number; suffi
 // ── Testimonial Slider ────────────────────────────────────────────────────────
 function TestimonialSlider() {
   const [active, setActive] = React.useState(0);
-  const timerRef = useRef<ReturnType<typeof setInterval>>();
+  const timerRef = useRef<ReturnType<typeof setInterval> | undefined>(undefined);
 
   const reset = () => {
     clearInterval(timerRef.current);

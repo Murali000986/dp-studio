@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
-import { useCounter } from '../../hooks/useCounter';
-import { stats } from '../../data/content';
+import useCounter from '../../hooks/useCounter';
+import { STATS } from '../../data/content';
 
 function StatCard({ value, suffix, label, delay }: { value: number; suffix: string; label: string; delay: number }) {
   const { count, ref } = useCounter(value, 2200);
@@ -108,7 +108,7 @@ export default function StatsSection() {
           position: 'relative',
         }}>
           {/* Vertical dividers */}
-          {stats.map((stat, i) => (
+          {STATS.map((stat: { value: number; suffix: string; label: string }, i: number) => (
             <div key={stat.label} style={{ position: 'relative' }}>
               {i > 0 && (
                 <div style={{

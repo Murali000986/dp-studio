@@ -3,7 +3,7 @@ import { useLocation, Link } from 'react-router-dom';
 import { useSEO } from '../hooks/useSEO';
 import PageHero from '../components/ui/PageHero';
 import { SERVICES } from '../data/content';
-import { Camera, Video, Scissors, Smartphone, TrendingUp, Palette } from 'lucide-react';
+import { Video, Scissors, Smartphone, Palette } from 'lucide-react';
 
 const iconMap: Record<string, React.ElementType> = {
   videoshoot: Video,

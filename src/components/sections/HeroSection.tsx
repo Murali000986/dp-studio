@@ -309,7 +309,7 @@ export default function HeroSection() {
                 cursor: 'default',
                 transition: 'all 0.3s',
               }}
-              whileHover={{ scale: 1.05, borderColor: 'rgba(212,175,55,0.5)' } as object}
+              whileHover={{ scale: 1.05, borderColor: 'rgba(212,175,55,0.5)' } as never}
             >
               <span style={{ fontSize: '1.2rem' }}>{stat.icon}</span>
               <div style={{ textAlign: 'left' }}>

@@ -209,8 +209,8 @@ export default function CTASection() {
                 scale: 1.05,
                 y: -3,
                 ...(btn.primary ? { boxShadow: '0 15px 40px rgba(212,175,55,0.5)' } : { borderColor: 'rgba(212,175,55,0.5)' }),
-              } as object}
-              whileTap={{ scale: 0.97 } as object}
+              } as never}
+              whileTap={{ scale: 0.97 } as never}
             >
               <span>{btn.icon}</span>
               {btn.label}

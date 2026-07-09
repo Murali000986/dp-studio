@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { testimonials } from '../../data/content';
+import { TESTIMONIALS } from '../../data/content';
 
 export default function TestimonialsSection() {
   const [active, setActive] = useState(0);
@@ -9,7 +9,7 @@ export default function TestimonialsSection() {
   const resetInterval = () => {
     if (intervalRef.current) clearInterval(intervalRef.current);
     intervalRef.current = setInterval(() => {
-      setActive(prev => (prev + 1) % testimonials.length);
+      setActive(prev => (prev + 1) % TESTIMONIALS.length);
     }, 4000);
   };
 
@@ -23,7 +23,7 @@ export default function TestimonialsSection() {
     resetInterval();
   };
 
-  const t = testimonials[active];
+  const t = TESTIMONIALS[active];
 
   return (
     <section id="testimonials" style={{
@@ -187,7 +187,7 @@ export default function TestimonialsSection() {
 
         {/* Dots */}
         <div style={{ display: 'flex', justifyContent: 'center', gap: '0.6rem', marginTop: '2rem' }}>
-          {testimonials.map((_, i) => (
+          {TESTIMONIALS.map((_: unknown, i: number) => (
             <button
               key={i}
               id={`testimonial-dot-${i}`}
@@ -210,8 +210,8 @@ export default function TestimonialsSection() {
         {/* Navigation arrows */}
         <div style={{ display: 'flex', justifyContent: 'center', gap: '1rem', marginTop: '1.5rem' }}>
           {[
-            { label: '←', fn: () => goTo((active - 1 + testimonials.length) % testimonials.length), id: 'prev' },
-            { label: '→', fn: () => goTo((active + 1) % testimonials.length), id: 'next' },
+            { label: '←', fn: () => goTo((active - 1 + TESTIMONIALS.length) % TESTIMONIALS.length), id: 'prev' },
+            { label: '→', fn: () => goTo((active + 1) % TESTIMONIALS.length), id: 'next' },
           ].map(btn => (
             <button
               key={btn.id}

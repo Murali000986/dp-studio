@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { supabase } from '../../lib/supabase';
 import { Plus, Trash2, Edit2 } from 'lucide-react';
-import { PORTFOLIO_ITEMS } from '../../data/content';
+
 
 export default function AdminPortfolio() {
   const [items, setItems] = useState<any[]>([]);

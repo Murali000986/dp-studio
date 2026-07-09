@@ -305,3 +305,13 @@ export const CAREER_ROLES = [
     description: 'Strong portfolio in brand identity, packaging, and digital design. Proficient in Figma and Adobe Suite.',
   },
 ];
+
+export const WHY_US = [
+  { icon: '🎬', title: 'Cinematic Quality', description: 'We shoot in 4K with professional-grade lenses, lights, and audio to deliver Hollywood-level quality for every project.' },
+  { icon: '⚡', title: 'Fast Turnaround', description: 'We deliver edited content within agreed timelines — often ahead of schedule — without ever compromising on quality.' },
+  { icon: '🤝', title: 'Client-First Approach', description: 'We treat every project as if it were our own brand. Your success is our success, and we go the extra mile every time.' },
+  { icon: '📊', title: 'Data-Driven Results', description: 'Our social media and marketing strategies are backed by analytics, ensuring every post and campaign moves the needle.' },
+  { icon: '🎨', title: 'Creative Excellence', description: 'Our team blends technical expertise with creative artistry to produce visuals that truly stand out in crowded markets.' },
+  { icon: '🔒', title: 'Full Transparency', description: 'No hidden fees. No surprise changes. You get a clear scope, timeline, and pricing before we ever begin a project.' },
+];
+

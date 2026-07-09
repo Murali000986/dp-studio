@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 
-const fadeUp = {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const fadeUp: any = {
   hidden: { opacity: 0, y: 40 },
   visible: (i: number) => ({
     opacity: 1,
@@ -201,8 +202,8 @@ export default function AboutSection() {
               transition: 'all 0.3s',
               boxShadow: '0 4px 20px rgba(212,175,55,0.25)',
             }}
-            whileHover={{ scale: 1.04, boxShadow: '0 12px 35px rgba(212,175,55,0.45)' } as object}
-            whileTap={{ scale: 0.97 } as object}
+            whileHover={{ scale: 1.04, boxShadow: '0 12px 35px rgba(212,175,55,0.45)' } as never}
+            whileTap={{ scale: 0.97 } as never}
           >
             Explore Our Services →
           </motion.a>

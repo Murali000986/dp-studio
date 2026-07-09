@@ -3,7 +3,7 @@ import { useParams, Navigate, Link } from 'react-router-dom';
 import { useSEO } from '../hooks/useSEO';
 import PageHero from '../components/ui/PageHero';
 import { SERVICES } from '../data/content';
-import { Camera, Video, Scissors, Smartphone, TrendingUp, Palette, ChevronDown, CheckCircle2 } from 'lucide-react';
+import { Video, Scissors, Smartphone, Palette, ChevronDown, CheckCircle2 } from 'lucide-react';
 
 const iconMap: Record<string, React.ElementType> = {
   videoshoot: Video,
@@ -177,7 +177,7 @@ export default function ServiceDetailPage() {
           </div>
 
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '2rem' }}>
-            {service.process.map((p, idx) => (
+            {service.process.map((p) => (
               <div key={p.step} style={{ position: 'relative', background: '#fff', padding: '2.5rem', borderRadius: '16px', boxShadow: 'var(--shadow-sm)' }}>
                 <div style={{ 
                   fontFamily: "'Playfair Display', serif", 

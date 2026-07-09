@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { supabase } from '../../lib/supabase';
 import { Plus, Trash2, Edit2 } from 'lucide-react';
-import { BLOG_POSTS } from '../../data/content';
+
 
 export default function AdminBlog() {
   const [items, setItems] = useState<any[]>([]);

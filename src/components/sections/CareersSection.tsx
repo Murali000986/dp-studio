@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { careers } from '../../data/content';
+import { CAREER_ROLES } from '../../data/content';
 
 export default function CareersSection() {
   return (
@@ -103,7 +103,7 @@ export default function CareersSection() {
                 transition: 'all 0.3s',
                 boxShadow: '0 4px 20px rgba(212,175,55,0.25)',
               }}
-              whileHover={{ scale: 1.04, boxShadow: '0 12px 35px rgba(212,175,55,0.45)' } as object}
+              whileHover={{ scale: 1.04, boxShadow: '0 12px 35px rgba(212,175,55,0.45)' } as never}
             >
               View Open Roles →
             </motion.a>
@@ -111,14 +111,14 @@ export default function CareersSection() {
 
           {/* Right — Role cards */}
           <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-            {careers.map((role, i) => (
+            {CAREER_ROLES.map((role: { title: string; type: string; location: string; description: string }, i: number) => (
               <motion.div
                 key={role.title}
                 initial={{ opacity: 0, x: 40 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 + 0.2, duration: 0.6 }}
-                whileHover={{ x: 6, borderColor: 'rgba(212,175,55,0.4)' } as object}
+                whileHover={{ x: 6, borderColor: 'rgba(212,175,55,0.4)' } as never}
                 style={{
                   background: 'rgba(255,255,255,0.02)',
                   border: '1px solid rgba(255,255,255,0.07)',

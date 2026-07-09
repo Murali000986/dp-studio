@@ -1,7 +1,6 @@
 import { useSEO } from '../hooks/useSEO';
 import PageHero from '../components/ui/PageHero';
 import { CAREER_ROLES } from '../data/content';
-import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { supabase } from '../lib/supabase';
 
